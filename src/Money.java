@@ -1,9 +1,11 @@
-abstract public class Money {
+public class Money {
 
     protected int amount;
     protected String currency;
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier){
+        return null;
+    }
 
     Money(int amount, String currency) {
         this.amount = amount;
@@ -26,6 +28,11 @@ abstract public class Money {
 
     String currency() {
         return currency;
+    }
+
+    public String toString() {
+
+        return amount + " " + currency;
     }
 }
 
