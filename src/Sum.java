@@ -15,7 +15,13 @@ public class Sum implements MExpression {
         return new Money(amount, to);
     }
 
-    public MExpression plus(MExpression addend) {
-        return null;
+    public MExpression plus (MExpression addend) {
+
+        return new Sum(this, addend);
+    }
+
+    public MExpression times (int multiplier) {
+
+        return new Sum(augend.times(multiplier), addend.times(multiplier));
     }
 }

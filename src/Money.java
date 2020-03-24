@@ -18,7 +18,7 @@ public class Money implements MExpression {
         return new Money(amount, "CHF");
     }
 
-    MExpression times(int multiplier) {
+    public MExpression times(int multiplier) {
 
         return new Money(this.amount * multiplier, currency);
     }
