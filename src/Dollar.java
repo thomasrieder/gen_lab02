@@ -4,10 +4,11 @@ public class Dollar {
 
     public Dollar(int amount){
 
+        this.amount = amount;
     }
 
     void times(int multiplier) {
 
-        this.amount = 5 * 2;
+        this.amount *= multiplier;
     }
 }
