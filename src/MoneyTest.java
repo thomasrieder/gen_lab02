@@ -105,4 +105,5 @@ public class MoneyTest {
         Money result = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(20),  result);
     }
+
 }
