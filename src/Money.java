@@ -1,4 +1,4 @@
-public class Money {
+public class Money implements MExpression {
 
     protected int amount;
     protected String currency;
@@ -8,7 +8,6 @@ public class Money {
         this.amount = amount;
         this.currency = currency;
     }
-
 
 
     static Money dollar(int amount) {
@@ -22,6 +21,11 @@ public class Money {
     Money times(int multiplier) {
 
         return new Money(this.amount * multiplier, currency);
+    }
+
+    MExpression plus(Money addend) {
+
+        return new Money(amount + addend.amount, currency);
     }
 
     public boolean equals(Object object) {
