@@ -1,9 +1,9 @@
 public class Sum implements MExpression {
 
-    Money augend;
-    Money addend;
+    MExpression augend;
+    MExpression addend;
 
-    Sum(Money augend, Money addend) {
+    Sum(MExpression augend, MExpression addend) {
 
         this.augend = augend;
         this.addend = addend;
@@ -13,5 +13,9 @@ public class Sum implements MExpression {
 
         int amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount;
         return new Money(amount, to);
+    }
+
+    public MExpression plus(MExpression addend) {
+        return null;
     }
 }

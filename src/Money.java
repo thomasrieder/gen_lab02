@@ -18,12 +18,12 @@ public class Money implements MExpression {
         return new Money(amount, "CHF");
     }
 
-    Money times(int multiplier) {
+    MExpression times(int multiplier) {
 
         return new Money(this.amount * multiplier, currency);
     }
 
-    MExpression plus(Money addend) {
+    public MExpression plus(MExpression addend) {
 
 
         return new Sum(this, addend);
