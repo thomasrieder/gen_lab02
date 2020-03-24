@@ -25,7 +25,8 @@ public class Money implements MExpression {
 
     MExpression plus(Money addend) {
 
-        return new Money(amount + addend.amount, currency);
+
+        return new Sum(this, addend);
     }
 
     public Money reduce(Bank bank, String to) {
