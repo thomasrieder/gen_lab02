@@ -3,14 +3,13 @@ public class Money {
     protected int amount;
     protected String currency;
 
-    Money times(int multiplier){
-        return null;
-    }
 
     Money(int amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
+
+
 
     static Dollar dollar(int amount) {
         return new Dollar(amount, "USD");
@@ -18,6 +17,11 @@ public class Money {
 
     static Franc franc(int amount) {
         return new Franc(amount, "CHF");
+    }
+
+    Money times(int multiplier) {
+
+        return new Money(this.amount * multiplier, currency);
     }
 
     public boolean equals(Object object) {
@@ -29,6 +33,7 @@ public class Money {
     String currency() {
         return currency;
     }
+
 
     public String toString() {
 

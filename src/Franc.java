@@ -4,10 +4,4 @@ public class Franc extends Money{
 
         super(amount, currency);
     }
-
-    Money times(int multiplier) {
-
-        return new Money(this.amount * multiplier, currency);
-    }
-
 }
