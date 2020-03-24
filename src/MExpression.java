@@ -1,4 +1,4 @@
 public interface MExpression {
 
-    Money reduce(String to);
+    Money reduce(Bank bank, String to);
 }
