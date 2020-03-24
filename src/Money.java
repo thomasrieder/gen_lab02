@@ -23,7 +23,7 @@ public class Money {
     public boolean equals(Object object) {
 
         Money money = (Money) object;
-        return this.amount == money.amount && getClass().equals(money.getClass());
+        return this.amount == money.amount && currency().equals(money.currency());
     }
 
     String currency() {
