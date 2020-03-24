@@ -28,6 +28,10 @@ public class Money implements MExpression {
         return new Money(amount + addend.amount, currency);
     }
 
+    public Money reduce(String to) {
+        return this;
+    }
+
     public boolean equals(Object object) {
 
         Money money = (Money) object;
